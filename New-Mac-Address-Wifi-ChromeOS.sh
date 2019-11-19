@@ -1,5 +1,9 @@
-sudo ifconfig wlan0 down
-mac_address=(echo fa:55:3d:$[RANDOM%10]$[RANDOM%10]:$[RANDOM%10]$[RANDOM%10]:$[RANDOM%10]$[RANDOM%10])
-sudo ifconfig wlan0 hw ether $mac_address
-sudo ifconfig wlan0 up
-echo "Changed"
+hexchars="0123456789ABCDEF"
+end=$( for i in {1..10} ; do echo -n ${hexchars:$(( $RANDOM % 16 )):1} ; done | sed -e 's/\(..\)/:\1/g' )
+MAC=00$end
+ 
+ifconfig wlan0 down
+ifconfig wlan0 hw ether $MAC
+ifconfig wlan0 up
+ 
+echo $MAC
