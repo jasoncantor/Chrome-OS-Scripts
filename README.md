@@ -1,2 +1,1 @@
-## Hi,
-## this is a repo for helpful chromeos scripts
+## Hi,                                                                                                                                                              this is a repo for helpful chromeos scripts
