@@ -1,4 +1,5 @@
 #!/bin/bash
+# Ask the user for login details
 
 Sudo apt-get install git -y
 git config --global credential.helper store
