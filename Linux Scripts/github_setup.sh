@@ -3,12 +3,15 @@
 
 Sudo apt-get install git -y
 git config --global credential.helper store
-read -p "Enter Your UserName for Github: "  username
+echo "Enter Your UserName for Github: "
+read -p username
 git config --global user.name $username
 echo "Usename Stored: " $username
-read -p "Enter Your Email for Github: " email
+echo "Enter Your Email for Github: "
+read -p email
 git config --global user.email $email
 echo "Email Stored: " $email
-read -sp "Enter Your Password for Github: " password
+echo "Enter Your Password for Github: "
+read -sp password
 git config --global user.password $password
 echo "Password Stored: " $password
